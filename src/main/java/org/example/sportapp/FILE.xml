@@ -1,0 +1,12 @@
+<Athletes>
+    <Athlete>
+        <SecondName>Бизунова</SecondName>
+        <FirstName>Настя</FirstName>
+        <Patronymic>Семёновна</Patronymic>
+        <TeamCast>Основа</TeamCast>
+        <Position>Форвард</Position>
+        <Title>0</Title>
+        <Sport>3</Sport>
+        <Rank>КМС</Rank>
+    </Athlete>
+</Athletes>

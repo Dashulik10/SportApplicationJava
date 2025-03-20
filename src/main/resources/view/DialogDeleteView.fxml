@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.sportapp.controllers.DeleteAthleteController"
+            prefWidth="510"
+            style="-fx-background-color: linear-gradient(to bottom, #c8e7ed, #bfcfff)">
+
+    <top>
+        <Label text="Удаление спортсмена" style="-fx-font-size: 20px; -fx-font-weight: bold;" BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox spacing="10" stylesheets="@/style/delete.css" >
+            <TableView fx:id="athletesTable" VBox.vgrow="ALWAYS" styleClass="table-view">
+                <columns>
+                    <TableColumn text="ID" fx:id="idColumn" prefWidth="50" styleClass="table-column-header"/>
+                    <TableColumn text="Фамилия" fx:id="secondNameColumn" prefWidth="150" styleClass="table-column-header"/>
+                    <TableColumn text="Имя" fx:id="firstNameColumn" prefWidth="150" styleClass="table-column-header" />
+                    <TableColumn text="Ранг" fx:id="rankColumn" prefWidth="100" styleClass="table-column-header"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" BorderPane.alignment="CENTER" stylesheets="@/style/delete.css">
+            <Button text="Удалить" onAction="#handleDelete" styleClass="button-cancel"/>
+            <Button text="Отмена" onAction="#handleCancel" styleClass="button"/>
+        </HBox>
+    </bottom>
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+</BorderPane>

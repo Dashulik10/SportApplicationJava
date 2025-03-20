@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.sportapp.controllers.SearchAthleteController"
+            prefWidth="1150" prefHeight="600">
+    <!-- Поля ввода (слева) -->
+    <left>
+        <VBox spacing="10" alignment="TOP_LEFT" prefWidth="350" BorderPane.alignment="CENTER" stylesheets="@/style/search.css" styleClass="dialog-content">
+            <Label text="Параметры поиска" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+            <TextField fx:id="secondNameField" promptText="Фамилия" styleClass="text-field"/>
+            <TextField fx:id="firstNameField" promptText="Имя" styleClass="text-field"/>
+            <ComboBox fx:id="teamCastComboBox" promptText="Тип состава" styleClass="combo-box"/>
+            <ComboBox fx:id="sportComboBox" promptText="Вид спорта" styleClass="combo-box"/>
+            <ComboBox fx:id="rankComboBox" promptText="Ранг" styleClass="combo-box"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Найти" onAction="#handleSearch" styleClass="button"/>
+                <Button text="Закрыть" onAction="#handleClose" styleClass="button-cancel"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <center>
+        <TableView fx:id="resultsTable" prefWidth="800" prefHeight="400" BorderPane.alignment="CENTER" stylesheets="@/style/search.css" styleClass="table-view">
+            <columns>
+                <TableColumn text="ID" fx:id="idColumn" prefWidth="50" styleClass="table-column-header"/>
+                <TableColumn text="Фамилия" fx:id="secondNameColumn" prefWidth="150" styleClass="table-column-header"/>
+                <TableColumn text="Имя" fx:id="firstNameColumn" prefWidth="150" styleClass="table-column-header"/>
+                <TableColumn text="Тип состава" fx:id="teamCastColumn" prefWidth="150" styleClass="table-column-header"/>
+                <TableColumn text="Вид спорта" fx:id="sportColumn" prefWidth="150" styleClass="table-column-header"/>
+                <TableColumn text="Ранг" fx:id="rankColumn" prefWidth="100" styleClass="table-column-header"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+</BorderPane>

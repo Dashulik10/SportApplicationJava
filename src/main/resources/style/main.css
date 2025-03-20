@@ -1,0 +1,157 @@
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #d3d3d3;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 8, 0, 2, 2);
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-font-size: 14px;
+}
+
+.choice-box {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #d3d3d3;
+    -fx-border-radius: 10px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-padding: 5px;
+}
+
+.table-row-cell {
+    -fx-padding: 8px;
+    -fx-background-color: white;
+    -fx-border-color: #e4e4e4;
+    -fx-alignment: center-left;
+}
+
+.table-column-header {
+    -fx-background-color: #f7f7f7;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #606060;
+    -fx-border-color: #d3d3d3;
+    -fx-border-width: 0 0 1px 0;
+    -fx-alignment: center;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #f0fff4;
+    -fx-text-fill: #3d3d3d;
+    -fx-border-color: transparent;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgba(192, 230, 255, 0.3);
+}
+
+.table-cell {
+    -fx-padding: 6px;
+    -fx-text-fill: #444444;
+    -fx-font-weight: 400;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-alignment: CENTER;
+}
+
+.table-view .placeholder {
+    -fx-text-fill: #999999;
+    -fx-font-size: 13px;
+    -fx-opacity: 0.8;
+    -fx-padding: 20px;
+    -fx-font-style: italic;
+}
+
+.side-panel {
+    -fx-background-color: linear-gradient(to bottom, #defcf9, #c3bef0);
+    -fx-padding: 20px;
+    -fx-spacing: 15px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.25), 10, 0, 0, 2);
+}
+
+.button {
+    -fx-background-color: #c3bef0;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-padding: 12px 25px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-font-family: 'Arial Black', Gadget, sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0, 1, 2);
+    -fx-cursor: hand;
+    -fx-wrap-text: true;
+    -fx-alignment: CENTER;
+}
+
+.button {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 60px;
+}
+
+/* Эффекты при наведении */
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #a393eb, #f5c7f7);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 8, 0, 0, 4);
+}
+
+/* Эффекты при нажатии */
+.button:pressed {
+    -fx-background-color: #5e63b6;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 6, 0, 0, 1);
+}
+
+/* Специальные стили для кнопки "Отмена" / опасного действия */
+.button-cancel {
+    -fx-background-color: linear-gradient(to bottom, #ff6b6b, #ff4949);
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+/* Эффект при наведении на кнопку "Отмена" */
+.button-cancel:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff7e7e, #ff5e5e);
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.2), 8, 0, 0, 4);
+}
+
+/* Эффект при нажатии на кнопку "Отмена" */
+.button-cancel:pressed {
+    -fx-background-color: #cc3939;
+}
+
+/* Дополнительные кнопки для важных акцентов */
+/* Кнопки для управления страницами */
+.button-primary {
+    -fx-background-color: linear-gradient(to bottom, #6a95ff, #4e7cff);
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 12px; /* Уменьшен размер шрифта */
+    -fx-font-weight: bold;
+    -fx-padding: 3px 10px; /* Уменьшены внутренние отступы */
+    -fx-border-radius: 10px; /* Уменьшены радиусы кнопок */
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 3, 0, 0, 2); /* Слабее тень */
+    -fx-cursor: hand;
+    -fx-pref-width: 75px; /* Заданы фиксированные размеры по ширине */
+    -fx-pref-height: 25px; /* Заданы фиксированные размеры по высоте */
+}
+
+.button-primary:hover {
+    -fx-background-color: linear-gradient(to bottom, #5990ff, #4678e6);
+}
+
+.button-primary:pressed {
+    -fx-background-color: #4e7cff;
+}
+
+/* Выравнивание блока с кнопками и текстом */
+.hbox {
+    -fx-spacing: 10; /* Сужено пространство между элементами */
+    -fx-alignment: center; /* Центровка блока */
+}
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.sportapp.controllers.AddAthleteController"
+      spacing="10"
+      alignment="CENTER"
+        stylesheets="@/style/add.css"
+        styleClass="dialog-content">
+    <TextField fx:id="secondNameField" promptText="Фамилия" styleClass="text-field"/>
+    <TextField fx:id="firstNameField" promptText="Имя" styleClass="text-field"/>
+    <TextField fx:id="patronymicField" promptText="Отчество" styleClass="text-field"/>
+    <ComboBox fx:id="sportComboBox" promptText="Выберите вид спорта" styleClass="combo-box"/>
+    <TextField fx:id="positionField" promptText="Позиция" styleClass="text-field"/>
+    <ComboBox fx:id="teamCastComboBox" promptText="Выберите команду" styleClass="combo-box"/>
+    <ComboBox fx:id="titleComboBox" promptText="Выберите титул" styleClass="combo-box"/>
+    <ComboBox fx:id="rankComboBox" promptText="Выберите ранг" styleClass="combo-box"/>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Добавить атлета" onAction="#handleAddAthlete" styleClass="button"/>
+        <Button text="Закрыть окно" onAction="#close" styleClass="button-cancel"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.sportapp.controllers.TreeController"
+      spacing="10"
+      alignment="CENTER"
+      prefHeight="400"
+      prefWidth="600">
+    <Label text="Древовидная структура спортсменов" />
+    <TreeView fx:id="athletesTreeView" prefHeight="350" prefWidth="580" />
+    <Button text="Закрыть" onAction="#handleClose" />
+</VBox>

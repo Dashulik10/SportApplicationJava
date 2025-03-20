@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.sportapp.controllers.AthletesTableController"
+            stylesheets="@/style/main.css"
+            prefWidth="1100" prefHeight="600">
+    <left>
+        <VBox spacing="10" styleClass="side-panel" prefWidth="200" maxWidth="200">
+            <Button text="Добавить атлета" onAction="#openAddAthleteScreen" />
+            <Button text="Удалить атлета" onAction="#openDeleteAthleteScreen" />
+            <Button text="Поиск атлета" onAction="#openSearchAthleteScreen" />
+            <Button text="Загрузить XML" onAction="#handleLoadXML" />
+            <Button text="Сохранить в XML" onAction="#handleSaveXML" />
+            <Button text="Дерево" onAction="#openTreeView"/>
+        </VBox>
+    </left>
+    <center>
+        <VBox spacing="20" alignment="CENTER">
+            <!-- Таблица -->
+            <TableView fx:id="athletesTable"
+                       styleClass="table-view"
+                       prefHeight="500"
+                       prefWidth="1150">
+                <columns>
+                    <TableColumn text="ID" fx:id="idColumn" styleClass="table-column-header"/>
+                    <TableColumn text="Фамилия" fx:id="secondNameColumn" styleClass="table-column-header"/>
+                    <TableColumn text="Имя" fx:id="firstNameColumn" styleClass="table-column-header"/>
+                    <TableColumn text="Отчество" fx:id="patronymicColumn" styleClass="table-column-header"/>
+                    <TableColumn text="Тип состава" fx:id="teamCastColumn" styleClass="table-column-header"/>
+                    <TableColumn text="Позиция" fx:id="positionColumn" styleClass="table-column-header"/>
+                    <TableColumn text="Титул" fx:id="titleColumn" styleClass="table-column-header"/>
+                    <TableColumn text="Спорт" fx:id="sportColumn" styleClass="table-column-header"/>
+                    <TableColumn text="Ранг" fx:id="rankColumn" styleClass="table-column-header"/>
+                </columns>
+            </TableView>
+
+            <!-- Элементы управления пагинацией -->
+            <HBox spacing="10" alignment="CENTER" prefHeight="50"> <!-- Уменьшен отступ и высота блока -->
+                <Button text="Первая" onAction="#handleFirstPage" styleClass="button-primary" />
+                <Button text="Назад" onAction="#handlePreviousPage" styleClass="button-primary" />
+                <Label text="Страница: " />
+                <Label fx:id="currentPageLabel" />
+                <Button text="Вперед" onAction="#handleNextPage" styleClass="button-primary" />
+                <Button text="Последняя" onAction="#handleLastPage" styleClass="button-primary" />
+
+                <Label text="Записей: " />
+                <ChoiceBox fx:id="itemsPerPageChoiceBox" prefWidth="80" /> <!-- Уменьшена ширина -->
+                <Label text="Всего записей: " />
+                <Label fx:id="totalRecordsLabel" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
